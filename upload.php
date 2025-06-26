@@ -15,12 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    // Allow only specific file types (e.g., images)
-    $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
-    if (!in_array($_FILES['fileToUpload']['type'], $allowedTypes)) {
-        echo "Error: Only JPG, PNG, and GIF files are allowed.";
-        exit;
-    }
 
     // Attempt to move the uploaded file to the target directory
     if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $uploadFile)) {
