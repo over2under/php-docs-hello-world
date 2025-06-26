@@ -1,4 +1,3 @@
-      
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Directory where files will be uploaded
